@@ -7,22 +7,23 @@ body {
     font-family: Tahoma, Arial;
 }
 
-div.menu {
+/* Changed <div> to <nav> for several so nav bar would be formatted correctly */
+nav.menu {
     width: 100%;
     background-color: #4d5791;
     height: 44px;
     padding: 0 40px;
 }
 
-div.menu ul,
-div.menu ul li {
+nav.menu ul,
+nav.menu ul li {
     margin: 0;
     padding: 0 ;
     list-style: none;
     display: inline-block;
 }
 
-div.menu ul li a {
+nav.menu ul li a {
     display: block;
     padding: 0 20px;
     line-height: 44px;
@@ -32,7 +33,7 @@ div.menu ul li a {
     margin: 0;
 }
 
-div.menu ul li a:hover  {
+nav.menu ul li a:hover  {
     background-color: white;
     color: #4d5791;
 }
@@ -89,6 +90,23 @@ div.hero h2 {
     max-width: 340px;
     text-align: justify;
     margin: 20px;
+}
+
+/* Changing the font size for visually impaired and so it is scalable */
+p{
+    font-size: .9vw;
+}
+
+/* Takes the Skip Content link off of the page */
+.skip{
+    left: 50%;
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+/* Brings Skip Content link to the page when it is focused on by using Tab */
+.skip:focus{
+    transform: translateY(0%);
 }
 
 @media screen and (min-width: 768px) {
